@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap");
+
+.profile-pic {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.01);
+}
