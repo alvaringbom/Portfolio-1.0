@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
-import ProfilePic from "../images/profile-pic.png"; // Importera bilden
+// import { Link } from "react-router-dom";
+// import ProfilePic from "../images/profile-pic.png"; // Importera bilden
+import Intro from "../components/Intro";
+import Projects from "../components/projects/Projects";
+import About from "../components/about/About";
 
 const HomePage = () => {
   return (
     <>
-      <h1>Välkommen till förstasidan</h1>
-      <Link to="/about-me">
-        <img src={ProfilePic} alt="Profilbild" className="profile-pic" />
-      </Link>
+      <Intro />
+      <Projects />
+      <About />
     </>
   );
 };
