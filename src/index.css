@@ -59,6 +59,15 @@ a {
   font-style: normal;
 }
 
+h1,
+h2 {
+  font-size: 96px;
+}
+
+h2 {
+  color: #000be0;
+}
+
 h3,
 p {
   font-family: "Epilogue", sans-serif;
@@ -67,6 +76,9 @@ p {
   font-style: normal;
 }
 
+.intro-typewriter {
+  font-size: 40px;
+}
 .intro-typewriter:after {
   content: "|";
   animation: blink 2.3s infinite;
@@ -83,4 +95,38 @@ p {
   75% {
     opacity: 0;
   }
+}
+
+.intro-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.profile-picture {
+  width: 500px;
+  height: auto;
+}
+
+/* @media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+} */
+
+/* PORTFÖLJ & OM MIG GRID */
+.section-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  position: sticky;
+  top: 100px; /* så rubriken stannar under navbar eller toppen */
+  align-self: start;
+  font-size: 1.5rem;
+  font-weight: bold;
 }

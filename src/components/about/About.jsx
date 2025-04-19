@@ -3,13 +3,15 @@ import Skills from "./Skills";
 
 const About = () => {
   return (
-    <>
-      <section id="about">
+    <section id="about" className="section-container">
+      <div className="section-title">
         <h2>Om mig</h2>
+      </div>
+      <div className="section-content">
         <Education />
         <Skills />
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
