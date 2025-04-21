@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 import "./NavFooter.css";
 import "./Pages.css";
+import "./Projects.css";
 
 function App() {
   return (

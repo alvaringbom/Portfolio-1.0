@@ -1,11 +1,16 @@
-// importera från cms
-
-const ProjectItem = () => {
+const ProjectItem = ({ title, description, imageUrl }) => {
   return (
-    <>
-      <h3>Titel på projekt</h3>
-      <p>Här står en beskrivning av projektet som är importerat</p>
-    </>
+    <div className="project-card">
+      <div className="project-content">
+        <div className="project-text">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+        {imageUrl && (
+          <img src={imageUrl} alt={title} className="project-image" />
+        )}
+      </div>
+    </div>
   );
 };
 

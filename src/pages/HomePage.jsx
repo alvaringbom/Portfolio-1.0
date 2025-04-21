@@ -8,8 +8,10 @@ const HomePage = () => {
   return (
     <>
       <Intro />
-      <Projects />
-      <About />
+      <div className="projects-about-section">
+        <Projects />
+        <About />
+      </div>
     </>
   );
 };

@@ -76,6 +76,14 @@ p {
   font-style: normal;
 }
 
+h3 {
+  font-size: 64px;
+}
+
+p {
+  font-size: 24px;
+}
+
 .intro-typewriter {
   font-size: 40px;
 }
@@ -118,15 +126,50 @@ p {
 /* PORTFÖLJ & OM MIG GRID */
 .section-container {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: 400px 1fr;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
 }
 
 .section-title {
   position: sticky;
-  top: 100px; /* så rubriken stannar under navbar eller toppen */
+  top: 50px;
   align-self: start;
-  font-size: 1.5rem;
-  font-weight: bold;
+}
+.project-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.profile-pic {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.01);
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Avstånd mellan text och bild */
+}
+
+.project-text {
+  flex: 1; /* Gör så texten tar upp allt utrymme som inte är bilden */
+}
+
+.projects-about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
 }
