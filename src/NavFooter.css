@@ -55,3 +55,7 @@
 .social-icon:hover {
   transform: scale(1.05); /* Gör ikonerna lite större vid hover */
 }
+
+footer {
+  margin-top: 100px;
+}
