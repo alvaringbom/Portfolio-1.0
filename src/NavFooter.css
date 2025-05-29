@@ -1,8 +1,11 @@
 .navbar,
 .footer {
+  display: flex;
+  width: 100%;
   padding: 1rem 0;
   color: rgb(0, 11, 224);
   font-size: 20px;
+  justify-content: center;
 }
 
 .nav-links {

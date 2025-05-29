@@ -7,7 +7,6 @@
   font-style: normal;
 }
 
-
 .epilogue-<uniquifier> {
   font-family: "Epilogue", sans-serif;
   font-optical-sizing: auto;
@@ -17,71 +16,82 @@
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
+  max-width: 100vw;
 }
 
 html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 body {
   background-color: #fcfcfc;
   color: black;
-  transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.5;
   color: #1a1a1a;
 }
 
 ul,
-ol {
-  list-style: none;
-}
-
+ol,
 a {
+  list-style: none;
   text-decoration: none;
   color: inherit;
-}
-
-button {
-  all: unset;
-  cursor: pointer;
 }
 
 h1,
 h2,
 a {
   font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
-}
-
-h1,
-h2 {
-  font-size: 96px;
-}
-
-h2 {
-  color: #000be0;
 }
 
 h3,
 p {
   font-family: "Epilogue", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
-  font-style: normal;
+}
+
+.profile-picture-container {
+  display: none;
+}
+
+.projects-about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 h3 {
-  font-size: 64px;
+  font-size: 32px;
 }
 
-p {
+h2 {
+  font-size: 40px;
+  color: #000be0;
+}
+
+/* INTRO */
+.intro-content {
+  padding-bottom: 50px;
+}
+.intro-text {
+  gap: 16px;
+}
+
+.intro-text h1 {
+  font-size: 44px;
+}
+
+.intro-text p {
   font-size: 24px;
+}
+
+.alva-ringbom {
+  color: #f05c00;
 }
 
 .intro-typewriter {
@@ -91,6 +101,112 @@ p {
   content: "|";
   animation: blink 2.3s infinite;
   color: #1a1a1a;
+}
+
+/* PROJECTS */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* PROJECT CARDS */
+.project-title-with-arrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-icon {
+  width: 50px;
+  height: auto;
+}
+
+.project-image {
+  width: 100%;
+  min-width: 200px;
+  max-width: 600px;
+  height: auto;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 0.5px solid #797979;
+  border-radius: 50px;
+  font-size: 12px;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 300;
+  margin: 8px 4px 0 0;
+}
+
+/*
+.profile-picture-container,
+.intro-text {
+  min-width: 0;
+  max-width: 100%;
+  flex: 1 1 0;
+}
+.intro-content {
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/*TABLET*/
+/* @media (min-width: 768px) {
+  html {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .profile-picture {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  .profile-picture-container {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .intro-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2 {
+    font-size: 96px;
+  }
+} */
+
+/*DESKTOP*/
+/* @media (min-width: 1024px) {
+  h1,
+  h2 {
+    font-size: 96px;
+  }
+}
+
+h3 {
+  font-size: 64px;
+}
+
+p {
+  font-size: 24px;
 }
 
 @keyframes blink {
@@ -103,17 +219,7 @@ p {
   75% {
     opacity: 0;
   }
-}
-
-.intro-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.profile-picture {
-  width: 500px;
-  height: auto;
-}
+} */
 
 /* @media (max-width: 768px) {
   .intro-content {
@@ -124,7 +230,7 @@ p {
 } */
 
 /* PORTFÖLJ & OM MIG GRID */
-.section-container {
+/* .section-container {
   display: grid;
   grid-template-columns: 400px 1fr;
 }
@@ -141,11 +247,7 @@ p {
   top: 50px;
   align-self: start;
 }
-.project-image {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+
   display: block;
 }
 .profile-pic {
@@ -163,14 +265,12 @@ p {
   display: flex;
   align-items: center;
   gap: 1rem; /* Avstånd mellan text och bild */
-}
 
-.project-text,
+/* .project-text,
 .content-text {
   flex: 1; /* Gör så texten tar upp allt utrymme som inte är bilden */
-}
 
-.projects-about-section {
+/* .projects-about-section {
   display: flex;
   flex-direction: column;
   gap: 200px;
@@ -181,4 +281,4 @@ p {
   flex-wrap: wrap;
   gap: 120px;
   margin-top: 35px;
-}
+} */

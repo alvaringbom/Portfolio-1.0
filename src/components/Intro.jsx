@@ -4,10 +4,10 @@ const Intro = () => {
   return (
     <>
       <div className="intro-content">
-        <div>
+        <div className="profile-picture-container">
           <img
             src={ProfilePicture}
-            alt="Profilbild"
+            alt="Bild på mitt ansikte"
             className="profile-picture"
           />
         </div>
@@ -15,8 +15,9 @@ const Intro = () => {
         <div className="intro-text">
           <h1>Hej! Välkommen till min portfolio.</h1>
           <p className="intro-typewriter">
-            Jag heter Alva Ringbom och gör användarcentrerade upplevelser med
-            kompetens inom UX, UI och frontend{" "}
+            Jag heter <span className="alva-ringbom">Alva Ringbom</span> och gör
+            användarcentrerade upplevelser med kompetens inom UX, UI och
+            frontend{" "}
           </p>
         </div>
       </div>
