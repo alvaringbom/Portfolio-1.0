@@ -13,7 +13,7 @@ const Intro = () => {
         </div>
 
         <div className="intro-text">
-          <h1>Hej! Välkommen till min portfolio.</h1>
+          <h1 className="intro-header">Hej! Välkommen till min portfolio.</h1>
           <p className="intro-typewriter">
             Jag heter <span className="alva-ringbom">Alva Ringbom</span> och gör
             användarcentrerade upplevelser med kompetens inom UX, UI och

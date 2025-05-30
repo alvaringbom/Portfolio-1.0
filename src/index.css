@@ -29,7 +29,6 @@ html {
 
 body {
   background-color: #fcfcfc;
-  color: black;
   line-height: 1.5;
   color: #1a1a1a;
 }
@@ -42,14 +41,13 @@ a {
   color: inherit;
 }
 
-h1,
-h2,
 a {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
 }
 
 h3,
+h2,
 p {
   font-family: "Epilogue", sans-serif;
   font-weight: 300;
@@ -65,16 +63,23 @@ p {
   gap: 50px;
 }
 
-h3 {
+h3,
+h2 {
   font-size: 32px;
 }
 
-h2 {
+h1 {
   font-size: 40px;
   color: #000be0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
 }
 
 /* INTRO */
+
+.intro-header {
+  color: #1a1a1a;
+}
 .intro-content {
   padding-bottom: 50px;
 }
@@ -113,14 +118,14 @@ h2 {
   }
 }
 
-/* PROJECTS */
+/* PROJECTS SECTION */
 .section-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 40px;
 }
 
-/* PROJECT CARDS */
+/* PROJECT CARD */
 .project-title-with-arrow {
   display: flex;
   align-items: center;
@@ -130,7 +135,8 @@ h2 {
 }
 
 .arrow-icon {
-  width: 50px;
+  display: flex;
+  max-width: 50px;
   height: auto;
 }
 
@@ -145,19 +151,55 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-width: 800px;
 }
 
-.project-tag {
-  display: inline-block;
-  padding: 6px 10px;
-  border: 0.5px solid #797979;
+.tag {
+  padding: 4px 10px;
+  border: 0.5px solid #a5a5a5;
   border-radius: 50px;
   font-size: 12px;
   font-family: "Epilogue", sans-serif;
   font-weight: 300;
-  margin: 8px 4px 0 0;
 }
 
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 800px;
+}
+
+/* ABOUT */
+.about-title {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.about-element {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 /*
 .profile-picture-container,
 .intro-text {
@@ -172,20 +214,21 @@ h2 {
 }
 
 /*TABLET*/
-/* @media (min-width: 768px) {
-  html {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
+@media (min-width: 768px) {
+  /* INTRO */
   .profile-picture {
     width: 100%;
     height: auto;
-    max-width: 100%;
   }
   .profile-picture-container {
     display: block;
     width: 100%;
-    max-width: 400px;
+    height: auto;
+    flex: 1;
+  }
+
+  .about-section-content {
+    gap: 50px;
   }
 
   .intro-content {
@@ -194,101 +237,68 @@ h2 {
     gap: 1rem;
     flex-wrap: wrap;
     max-width: 100%;
-    overflow-x: hidden;
+  }
+
+  .intro-text {
+    flex: 1;
+    min-width: 500px;
+    max-width: 800px;
   }
 
   h1,
   h2 {
-    font-size: 96px;
+    font-size: 50px;
   }
-} */
+
+  .arrow-icon {
+    max-width: 400px;
+    padding-right: 80px;
+  }
+}
 
 /*DESKTOP*/
-/* @media (min-width: 1024px) {
-  h1,
-  h2 {
-    font-size: 96px;
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  .profile-picture-container {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .intro-text h1 {
+    font-size: 70px;
+  }
+
+  .intro-text p {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 64px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  .section-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+  }
+
+  .section-content,
+  .about {
+    gap: 100px;
+    margin-top: 22px;
+  }
+
+  .section-title {
+    position: sticky;
+    top: 50px;
+    align-self: start;
   }
 }
-
-h3 {
-  font-size: 64px;
-}
-
-p {
-  font-size: 24px;
-}
-
-@keyframes blink {
-  0%,
-  50%,
-  100% {
-    opacity: 1;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-} */
-
-/* @media (max-width: 768px) {
-  .intro-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-} */
-
-/* PORTFÖLJ & OM MIG GRID */
-/* .section-container {
-  display: grid;
-  grid-template-columns: 400px 1fr;
-}
-
-.section-content {
-  display: flex;
-  flex-direction: column;
-  gap: 120px;
-  margin-top: 35px;
-}
-
-.section-title {
-  position: sticky;
-  top: 50px;
-  align-self: start;
-}
-
-  display: block;
-}
-.profile-pic {
-  width: 200px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.profile-pic:hover {
-  transform: scale(1.01);
-}
-
-.project-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* Avstånd mellan text och bild */
-
-/* .project-text,
-.content-text {
-  flex: 1; /* Gör så texten tar upp allt utrymme som inte är bilden */
-
-/* .projects-about-section {
-  display: flex;
-  flex-direction: column;
-  gap: 200px;
-}
-
-.about-section-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 120px;
-  margin-top: 35px;
-} */

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import client from "../../utils/contentfulClient";
 import ProjectItem from "./ProjectItem";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -27,19 +28,21 @@ const Projects = () => {
     <>
       <section id="projects" className="section-container">
         <div className="section-title">
-          <h2>Portfölj</h2>
+          <h1>Portfölj</h1>
         </div>
         <div className="section-content">
           {projects.map((item) => (
-            <ProjectItem
-              key={item.sys.id}
-              title={item.fields.title}
-              description={item.fields.description}
-              imageUrl={
-                item.fields.image?.fields?.file?.url &&
-                `https:${item.fields.image.fields.file.url}`
-              }
-            />
+            <Link to={`/projects/${item.fields.slug}`} key={item.sys.id}>
+              <ProjectItem
+                title={item.fields.title}
+                description={item.fields.description}
+                imageUrl={
+                  item.fields.image?.fields?.file?.url &&
+                  `https:${item.fields.image.fields.file.url}`
+                }
+                tags={item.fields.tags}
+              />
+            </Link>
           ))}
         </div>
       </section>

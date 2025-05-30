@@ -1,17 +1,19 @@
-const Education = () => {
+const Education = ({ title, school, tags }) => {
   return (
-    <>
-      <div className="content-text">
-        <h3>Utbildning</h3>
-        <p>
-          UX/UI designer med frontendkompetens <br />
-          Chas Academy <br />
-          <br />
-          UX och tillgänglighet för utvecklare <br />
-          Medieinstitutet
-        </p>
-      </div>
-    </>
+    <div className="about-element">
+      <h4 className="about-title">{title}</h4>
+
+      <p>{school}</p>
+      {tags && tags.length > 0 && (
+        <div className="tag-container">
+          {tags.map((tag, index) => (
+            <span key={index} className="tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
