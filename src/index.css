@@ -75,6 +75,33 @@ h1 {
   font-weight: 400;
 }
 
+/* SCROLL TO TOP */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 100%;
+  width: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.to-top-text {
+  color: #000be0;
+  font-weight: 500;
+}
+
 /* INTRO */
 
 .intro-header {
@@ -104,7 +131,7 @@ h1 {
 }
 .intro-typewriter:after {
   content: "|";
-  animation: blink 2.3s infinite;
+  animation: blink 1.5s infinite;
   color: #1a1a1a;
 }
 

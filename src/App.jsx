@@ -6,7 +6,8 @@ import Footer from "./components/Footer";
 import "./NavFooter.css";
 import "./Pages.css";
 import "./Projects.css";
-import ProjectPage from "./components/projects/ProjectPage";
+import ProjectPage from "./pages/ProjectPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
