@@ -78,32 +78,56 @@ h1 {
 /* SCROLL TO TOP */
 .scroll-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 100%;
-  width: 20px;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease, visibility 1s ease;
 }
 
-.scroll-to-top.show {
-  opacity: 1;
-  visibility: visible;
+.scroll-to-top img {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 26px;
+  height: 26px;
 }
 
-.to-top-text {
-  color: #000be0;
-  font-weight: 500;
+.progress-ring {
+  width: 50px;
+  height: 50px;
+  transform: rotate(-90deg);
+}
+
+.ring-bg,
+.ring-progress {
+  fill: none;
+  stroke-width: 1;
+}
+
+.ring-bg {
+  stroke: #ddd;
+}
+
+.ring-progress {
+  stroke: #1a1a1a;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.2s linear;
+}
+
+.scroll-to-top img {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 /* INTRO */
-
 .intro-header {
   color: #1a1a1a;
 }
